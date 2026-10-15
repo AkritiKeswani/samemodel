@@ -1,0 +1,46 @@
+{
+  "name": "json-extraction",
+  "description": "Structured extraction from messy text. Prompt-only JSON (no response_format), so every endpoint is eligible.",
+  "cases": [
+    {
+      "id": "contact",
+      "description": "Pull fields from an email signature",
+      "messages": [
+        { "role": "system", "content": "Extract data. Respond with ONLY a JSON object, no prose." },
+        { "role": "user", "content": "Keys: name, email, company, phone.\n\nThanks!\n--\nPriya Raman | Staff Engineer\nNorthwind Labs\npriya.raman@northwind.io · +1 (415) 555-0134" }
+      ],
+      "max_tokens": 1024,
+      "expect": { "json": { "required_keys": ["name", "email", "company", "phone"], "match": { "email": "priya.raman@northwind.io", "company": "northwind" } } }
+    },
+    {
+      "id": "classify-enum",
+      "description": "Constrained label",
+      "messages": [
+        { "role": "system", "content": "Classify the support message. Respond with ONLY JSON: {\"category\": one of [billing, bug, feature_request, other], \"urgent\": boolean}." },
+        { "role": "user", "content": "I was charged twice for my October invoice and need a refund before my card statement closes tomorrow." }
+      ],
+      "max_tokens": 1024,
+      "expect": { "json": { "required_keys": ["category", "urgent"], "match": { "category": "^\"billing\"$", "urgent": "true" } } }
+    },
+    {
+      "id": "line-items",
+      "description": "Arrays + arithmetic",
+      "messages": [
+        { "role": "system", "content": "Respond with ONLY JSON: {\"items\": [{\"name\": string, \"qty\": number, \"unit_price\": number}], \"total\": number}." },
+        { "role": "user", "content": "Order: 3 x USB-C cable @ $9.50, 1 x 65W charger @ $39.00, 2 x laptop sleeve @ $24.25." }
+      ],
+      "max_tokens": 1024,
+      "expect": { "json": { "required_keys": ["items", "total"], "match": { "total": "^116(\\.0+)?$" } } }
+    },
+    {
+      "id": "missing-field",
+      "description": "Use null instead of inventing data",
+      "messages": [
+        { "role": "system", "content": "Respond with ONLY JSON with keys name, email, phone. Use null for anything not present. Never invent values." },
+        { "role": "user", "content": "Hey, it's Marco from the design team — ping me on Slack whenever." }
+      ],
+      "max_tokens": 1024,
+      "expect": { "json": { "required_keys": ["name", "email", "phone"], "match": { "email": "^null$", "phone": "^null$" } } }
+    }
+  ]
+}

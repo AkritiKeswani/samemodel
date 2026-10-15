@@ -1,0 +1,311 @@
+{
+  "name": "tool-calling",
+  "description": "Can this endpoint drive an agent? Correct tool choice, well-formed arguments, and knowing when NOT to call a tool.",
+  "cases": [
+    {
+      "id": "single-tool",
+      "description": "Simple tool call, all args given",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What's the weather in Paris right now, in Celsius?"
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "get_weather",
+            "description": "Current weather for a city",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": "string",
+                  "enum": [
+                    "c",
+                    "f"
+                  ]
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        }
+      ],
+      "max_tokens": 1024,
+      "expect": {
+        "tool_call": {
+          "name": "get_weather",
+          "required_args": [
+            "city"
+          ],
+          "args_match": {
+            "city": "paris",
+            "unit": "^c$"
+          }
+        }
+      }
+    },
+    {
+      "id": "pick-the-right-tool",
+      "description": "Choose 1 of 3 similar tools",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Our checkout page is throwing 500s for EU customers. Please file this for the payments team as high priority."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "search_docs",
+            "description": "Search internal documentation",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "query": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "query"
+              ]
+            }
+          }
+        },
+        {
+          "type": "function",
+          "function": {
+            "name": "create_ticket",
+            "description": "File a ticket for a team",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "team": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "priority": {
+                  "type": "string",
+                  "enum": [
+                    "low",
+                    "medium",
+                    "high"
+                  ]
+                }
+              },
+              "required": [
+                "team",
+                "title",
+                "priority"
+              ]
+            }
+          }
+        },
+        {
+          "type": "function",
+          "function": {
+            "name": "send_message",
+            "description": "Send a chat message to a person",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "to": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "to",
+                "text"
+              ]
+            }
+          }
+        }
+      ],
+      "max_tokens": 1024,
+      "expect": {
+        "tool_call": {
+          "name": "create_ticket",
+          "required_args": [
+            "team",
+            "title",
+            "priority"
+          ],
+          "args_match": {
+            "team": "payment",
+            "priority": "^high$"
+          }
+        }
+      }
+    },
+    {
+      "id": "nested-args",
+      "description": "Array + ISO datetime arguments",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Schedule a 30 minute sync called 'Launch review' on 2026-11-03 at 15:00 UTC with ana@example.com and raj@example.com."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "create_event",
+            "description": "Create a calendar event",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "start": {
+                  "type": "string",
+                  "description": "ISO 8601 datetime"
+                },
+                "duration_minutes": {
+                  "type": "integer"
+                },
+                "attendees": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "start",
+                "duration_minutes",
+                "attendees"
+              ]
+            }
+          }
+        }
+      ],
+      "max_tokens": 1024,
+      "expect": {
+        "tool_call": {
+          "name": "create_event",
+          "required_args": [
+            "title",
+            "start",
+            "duration_minutes",
+            "attendees"
+          ],
+          "args_match": {
+            "start": "2026-11-03T15:00",
+            "duration_minutes": "^30$",
+            "attendees": "ana@example.com.*raj@example.com"
+          }
+        }
+      }
+    },
+    {
+      "id": "no-tool-needed",
+      "description": "Tools available but should answer directly",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Quick sanity check, no tools needed: what is 17 * 3? Reply with just the number."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "get_weather",
+            "description": "Current weather for a city",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        }
+      ],
+      "max_tokens": 1024,
+      "expect": {
+        "no_tool_call": true,
+        "contains": [
+          "51"
+        ]
+      }
+    },
+    {
+      "id": "multi-turn-tool-result",
+      "description": "Use a tool result from a previous turn",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What's the weather in Tokyo?"
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_1",
+              "type": "function",
+              "function": {
+                "name": "get_weather",
+                "arguments": "{\"city\":\"Tokyo\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_1",
+          "content": "{\"city\":\"Tokyo\",\"temp_c\":18,\"conditions\":\"light rain\"}"
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "get_weather",
+            "description": "Current weather for a city",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        }
+      ],
+      "max_tokens": 1024,
+      "expect": {
+        "no_tool_call": true,
+        "contains": [
+          "18"
+        ],
+        "regex": "rain"
+      }
+    }
+  ]
+}
