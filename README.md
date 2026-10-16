@@ -2,6 +2,8 @@
 
 **Same model, different provider, different answers.**
 
+**Live:** https://samemodel.vercel.app (replay three real runs with no key, or paste your own OpenRouter key for a live run)
+
 SameModel runs *your* test cases against every provider serving a model on OpenRouter. It scores each provider on correctness, availability, latency and cost, and writes the `provider` routing block to paste into your requests.
 
 ```bash
