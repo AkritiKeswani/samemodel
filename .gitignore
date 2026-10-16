@@ -3,3 +3,7 @@ node_modules
 .DS_Store
 reports/*.json
 _raw.mjs
+.next
+next-env.d.ts
+*.tsbuildinfo
+.vercel

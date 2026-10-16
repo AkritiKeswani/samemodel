@@ -6,12 +6,12 @@ SameModel runs *your* test cases against every provider serving a model on OpenR
 
 ```bash
 git clone https://github.com/AkritiKeswani/samemodel && cd samemodel
-cp .env.example .env            # add your OpenRouter key
-npm start                       # web UI → http://localhost:3000
+cp .env.example .env            # add your OpenRouter key (optional for the UI)
+npm install && npm run dev      # web UI → http://localhost:3000
 npm run bench -- -m moonshotai/kimi-k2-0905 -s tool-calling -r 3
 ```
 
-No dependencies. Node 20+.
+Node 20+. No key? The UI can replay three real saved runs, so you can see the full grid, leaderboard and routing config without spending anything.
 
 > 📹 Demo: _TODO: add Loom / screen recording link_
 
@@ -46,7 +46,7 @@ The model id gives no hint that a different provider answered, so this looks lik
 1. **Discover.** It uses `GET /api/v1/models/{author}/{slug}/endpoints` to find every provider endpoint serving the model, with quantization, price, context length and supported parameters. Endpoints that don't support a parameter the suite needs (for example `tools`) are skipped and reported. They aren't run just to fail.
 2. **Pin and run.** Each test case is run N times against each provider, pinned with `provider: { order: [tag], allow_fallbacks: false }`, so every result can be traced to exactly one provider. Two baselines run alongside: **OpenRouter default routing** (what you get with no configuration) and **`:exacto`**.
 3. **Score deterministically.** Responses are checked for empty output, tool-call markup leaked into `content`, missing or wrong tool, unparseable tool arguments, wrong argument values, unexpected tool calls, invalid JSON, missing keys and content mismatches.
-4. **Recommend.** It ranks providers by quality, cost or latency and emits a `provider` block (`order`, `ignore`, `allow_fallbacks: true`, `require_parameters`) with a one-line reason for each decision.
+4. **Suggest (provisionally).** It ranks providers by quality, cost or latency and emits a `provider` block (`order`, `ignore`, `allow_fallbacks: true`, `require_parameters`) with a one-line reason for each decision.
 
 The positioning against Exacto: Exacto is OpenRouter's curated, general-purpose answer for a handful of models. SameModel answers the same question for *your* prompts, on *any* model, and shows its evidence.
 
@@ -67,24 +67,26 @@ The positioning against Exacto: Exacto is OpenRouter's curated, general-purpose 
 | **Quality vs availability, scored separately** | A provider that rate-limits you during a 2-minute bench isn't evidence of bad output. `ignore` is driven only by *quality* failures (broken output given that the provider answered). Rate limits and timeouts lower `availability` but don't get a provider blacklisted. |
 | **Test behavior, not labels** | `quantization` on an endpoint is self-reported. fp4 endpoints sometimes match fp8 ones and some top scorers report no quantization at all, so the tool measures outputs instead of trusting metadata. |
 | **Baselines in the same grid** | "Default routing" shows what you get today, including *which* providers actually served it (read from the `provider` field on each chunk). That one line usually explains the flakiness people report. |
+| **Bring-your-own-key, never stored** | In the UI, a pasted key lives only in page memory. The server forwards it to OpenRouter in the `Authorization` header and never logs it, writes it to `reports/` or echoes it back. The demo is a screen recording, so there's no public page asking strangers for credentials. |
 | **Budget guard before the first call** | Worst-case spend is estimated from endpoint pricing × cases × runs × `max_tokens` and refused if it's over `--max-spend`. Actual spend comes from `usage.cost` on the final stream chunk and stops the run if it crosses the cap. |
 | **Concurrency: 8 global, 2 per provider** | Fast enough for a live demo, but low enough per provider that we don't create the rate limits we're trying to measure. |
 | **`temperature: 0`, N runs per case** | Reduces sampling noise, so remaining run-to-run variance says something about the endpoint. |
+| **Next.js for the UI, plain JS for the engine** | The first version was a zero-dependency `node:http` server plus one HTML file. Moving the UI to Next.js gives one-command deploys to Vercel (the SSE run endpoint becomes a route handler with a 300s `maxDuration`), typed UI state instead of hand-built `innerHTML`, and suites bundled at build time so serverless functions don't read from disk. `lib/` stays dependency-free JavaScript, so the CLI still runs with plain `node` and no build step. |
 | **Default model `openai/gpt-oss-120b`** | Cheap, widely served by many providers, and has tool support, so there's plenty of provider variety per dollar. |
 
 ## What it found (real runs, Oct 15 2026, ~$0.08 total)
 
-Same model id, same request, `temperature: 0`, and results that depend on who serves it:
+Same model id, same request, `temperature: 0`, and results that depend on who serves it. These are observations from specific tests on one evening, with 2 runs per case. They're a snapshot, not a verdict on any provider's overall quality, and providers change their stacks often (one changed behavior within an hour, below).
 
-- **Nebius (fp4) breaks `gpt-oss-120b` tool calls.** The arguments come back cut off mid-JSON, e.g. `{"city": "Paris", "unit": "`. In the stream, Nebius splits a single call across `index: 0` and a phantom `index: 1` with an empty name and id. Without streaming, the tail of the arguments is dropped entirely. It reproduced every time it was tried. Plain-text answers from the same endpoint are fine, so it looks like a tool-call parser bug, not a weights problem. (Diagnosed with `scripts/inspect.js`.)
-- **Atlas Cloud (fp8) returns DeepSeek V3.2 tool calls as plain text** (`tool_call_name create_event tool_call_arguments {...}`) instead of structured `tool_calls`. Default routing sent 1 in 10 calls there during one run, so an agent on default routing hits this occasionally, which matches the "randomly breaks" reports.
-- **Together rejects a standard OpenAI-format request.** An assistant turn with `content: null` and `tool_calls` gets a 400 "prompt cannot be empty". Every other provider accepts it, and it reproduced across runs.
+- **In these runs, Nebius (fp4) returned truncated `gpt-oss-120b` tool calls.** The arguments come back cut off mid-JSON, e.g. `{"city": "Paris", "unit": "`. In the stream, Nebius splits a single call across `index: 0` and a phantom `index: 1` with an empty name and id. Without streaming, the tail of the arguments is dropped entirely. It reproduced in every attempt (3 of 3 direct calls, plus both bench runs). Plain-text answers from the same endpoint are fine, so it looks like a tool-call parser bug, not a weights problem. (Diagnosed with `scripts/inspect.js`.)
+- **Atlas Cloud (fp8) returned some DeepSeek V3.2 tool calls as plain text** (`tool_call_name create_event tool_call_arguments {...}`) instead of structured `tool_calls`. Default routing sent 1 in 10 calls there during one run, so an agent on default routing hits this occasionally, which matches the "randomly breaks" reports.
+- **Together rejected a standard OpenAI-format request.** An assistant turn with `content: null` and `tool_calls` gets a 400 "prompt cannot be empty". Every other provider accepts it, and it reproduced across runs.
 - **Novita accepted a set of requests, then an hour later rejected the same requests** with an opaque `invalid_request_error`. Provider behavior drifts within hours, so a benchmark is a snapshot.
 - **One Friendli response misread `2026-11-03` in the prompt as `"2026-11 03"`** and asked the user to fix a typo that wasn't there.
 - **Where providers *don't* differ.** On plain JSON extraction, all 24 `gpt-oss-120b` endpoints scored 100% quality. They differed only on speed and price: TTFT from 181ms to over 1s, throughput from about 20 to over 1,700 tok/s, and roughly 5× on $/call. The variance concentrates in **tool calling**, which is where agents live.
 - **Default routing** for DeepSeek V3.2 tool calls spread across 4 providers (Friendli, Venice, Atlas Cloud, DeepInfra) and scored 75% quality. Pinning the top-ranked providers scored 100% at similar or lower cost.
 
-Caveat: with 2 runs per case (10 calls per provider per suite), the clear outliers (Nebius, Atlas Cloud, Together) reproduce across runs, but the ordering among the good providers shuffles from run to run. Use `-r 5` before trusting fine-grained rankings.
+**How much to trust this.** With 2 runs per case (about 10 calls per provider per suite), the clear outliers (Nebius, Atlas Cloud, Together) reproduced across runs, but the order among passing providers shuffled from run to run. So SameModel labels its routing output as *provisional*: it's good at catching providers that are broken on your tests, and weak at ranking healthy ones. Re-run with `-r 5` and your own prompts before changing production routing.
 
 ## Learnings
 
@@ -129,7 +131,8 @@ lib/checks.js       deterministic scoring + failure taxonomy
 lib/recommend.js    summary → provider routing config
 scripts/inspect.js  dump one provider's raw stream for one case (how the Nebius bug was found)
 bin/samemodel.js    CLI
-server.js           SSE server for the UI (BYOK, server-side caps)
-public/index.html   live grid, leaderboard, config
+app/api/run/        streaming run endpoint for the UI (BYOK, server-side caps)
+app/SameModel.tsx   live grid, leaderboard, config, replays
+public/replays/     three saved real runs the UI can replay without a key
 suites/             tool-calling, json-extraction
 ```

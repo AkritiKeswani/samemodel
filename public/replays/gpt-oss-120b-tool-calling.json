@@ -1,0 +1,5133 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "suite": "tool-calling",
+  "runs": 2,
+  "targets": [
+    {
+      "id": "venice/int4",
+      "label": "Venice",
+      "quantization": "int4",
+      "contextLength": 128000,
+      "price": {
+        "prompt": 3e-8,
+        "completion": 1.5e-7
+      },
+      "uptime1d": 99.85875706214689,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "coreweave/fp4",
+      "label": "CoreWeave",
+      "quantization": "fp4",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 3e-8,
+        "completion": 1.7e-7
+      },
+      "uptime1d": 99.78843441466854,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "dekallm/bf16",
+      "label": "DekaLLM",
+      "quantization": "bf16",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 3e-8,
+        "completion": 1.8e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "akashml/bf16",
+      "label": "AkashML",
+      "quantization": "bf16",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 3e-8,
+        "completion": 1.87e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "deepinfra/bf16",
+      "label": "DeepInfra",
+      "quantization": "bf16",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 3.7e-8,
+        "completion": 1.7e-7
+      },
+      "uptime1d": 99.36575052854123,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "crusoe/bf16",
+      "label": "Crusoe",
+      "quantization": "bf16",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 5e-8,
+        "completion": 2.5e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "mancer/fp8",
+      "label": "Mancer 2",
+      "quantization": "fp8",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 5e-8,
+        "completion": 2.5e-7
+      },
+      "uptime1d": 99.71751412429379,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "novita/fp4",
+      "label": "Novita",
+      "quantization": "fp4",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 5e-8,
+        "completion": 2.5e-7
+      },
+      "uptime1d": 99.64664310954063,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "baseten/fp4/us",
+      "label": "BaseTen",
+      "quantization": "fp4",
+      "contextLength": 128072,
+      "price": {
+        "prompt": 1e-7,
+        "completion": 5e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "baseten/fp4",
+      "label": "BaseTen",
+      "quantization": "fp4",
+      "contextLength": 128072,
+      "price": {
+        "prompt": 1e-7,
+        "completion": 5e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "parasail/fp4",
+      "label": "Parasail",
+      "quantization": "fp4",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1e-7,
+        "completion": 7.5e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "sambanova",
+      "label": "SambaNova",
+      "quantization": "unknown",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.4e-7,
+        "completion": 9.5e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "nebius/fp4",
+      "label": "Nebius",
+      "quantization": "fp4",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 6e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "deepinfra/turbo",
+      "label": "DeepInfra",
+      "quantization": "bf16",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 6e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "phala",
+      "label": "Phala",
+      "quantization": "unknown",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 6e-7
+      },
+      "uptime1d": 99.72527472527473,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "together",
+      "label": "Together",
+      "quantization": "unknown",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 6e-7
+      },
+      "uptime1d": 99.92937853107344,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "groq",
+      "label": "Groq",
+      "quantization": "unknown",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 6e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "mara",
+      "label": "Mara",
+      "quantization": "unknown",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 7.5e-7
+      },
+      "uptime1d": 93.00184162062615,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "cerebras/fp16",
+      "label": "Cerebras",
+      "quantization": "fp16",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 3.5e-7,
+        "completion": 7.5e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "default",
+      "label": "OpenRouter default routing",
+      "kind": "baseline",
+      "price": {
+        "prompt": 3.5e-7,
+        "completion": 9.5e-7
+      },
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "id": "exacto",
+      "label": ":exacto",
+      "kind": "baseline",
+      "price": {
+        "prompt": 3.5e-7,
+        "completion": 9.5e-7
+      },
+      "model": "openai/gpt-oss-120b:exacto"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "digitalocean",
+      "label": "DigitalOcean",
+      "quantization": "unknown",
+      "contextLength": 128000,
+      "price": {
+        "prompt": 6e-8,
+        "completion": 4.2e-7
+      },
+      "uptime1d": 100,
+      "reason": "doesn't support tools"
+    },
+    {
+      "id": "google-vertex/global",
+      "label": "Google",
+      "quantization": "unknown",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 9e-8,
+        "completion": 3.6e-7
+      },
+      "uptime1d": 26.360424028268554,
+      "reason": "doesn't support tools"
+    },
+    {
+      "id": "amazon-bedrock/eu-west-1",
+      "label": "Amazon Bedrock",
+      "quantization": "unknown",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 6e-7
+      },
+      "uptime1d": 100,
+      "reason": "doesn't support tools"
+    },
+    {
+      "id": "amazon-bedrock",
+      "label": "Amazon Bedrock",
+      "quantization": "unknown",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 6e-7
+      },
+      "uptime1d": 94.72803347280335,
+      "reason": "doesn't support tools"
+    },
+    {
+      "id": "siliconflow/fp8",
+      "label": "SiliconFlow",
+      "quantization": "fp8",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 6e-7
+      },
+      "uptime1d": 80.4054054054054,
+      "reason": "doesn't support tools"
+    }
+  ],
+  "results": [
+    {
+      "targetId": "coreweave/fp4",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 234
+    },
+    {
+      "targetId": "venice/int4",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 427
+    },
+    {
+      "targetId": "venice/int4",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 592
+    },
+    {
+      "targetId": "crusoe/bf16",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Crusoe",
+      "ttftMs": 251,
+      "totalMs": 509,
+      "tokensPerSec": 217,
+      "promptTokens": 139,
+      "completionTokens": 56,
+      "cost": 0.00002095,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "dekallm/bf16",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 1284
+    },
+    {
+      "targetId": "akashml/bf16",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "AkashML",
+      "ttftMs": 645,
+      "totalMs": 1624,
+      "tokensPerSec": 57,
+      "promptTokens": 139,
+      "completionTokens": 56,
+      "cost": 0.000014642,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "crusoe/bf16",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Crusoe",
+      "ttftMs": 338,
+      "totalMs": 648,
+      "tokensPerSec": 181,
+      "promptTokens": 139,
+      "completionTokens": 56,
+      "cost": 0.00002095,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "coreweave/fp4",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "CoreWeave",
+      "ttftMs": 454,
+      "totalMs": 1812,
+      "tokensPerSec": 43,
+      "promptTokens": 139,
+      "completionTokens": 59,
+      "cost": 0.0000142,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\"city\":\"Paris\",\"unit\":\"c\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "novita/fp4",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Novita",
+      "ttftMs": 447,
+      "totalMs": 673,
+      "tokensPerSec": 247,
+      "promptTokens": 139,
+      "completionTokens": 56,
+      "cost": 0.00002095,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "deepinfra/bf16",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 663,
+      "totalMs": 2202,
+      "tokensPerSec": 32,
+      "promptTokens": 128,
+      "completionTokens": 50,
+      "cost": 0.000013236,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "novita/fp4",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Novita",
+      "ttftMs": 497,
+      "totalMs": 732,
+      "tokensPerSec": 238,
+      "promptTokens": 139,
+      "completionTokens": 56,
+      "cost": 0.00002095,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "akashml/bf16",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "AkashML",
+      "ttftMs": 1437,
+      "totalMs": 2918,
+      "tokensPerSec": 34,
+      "promptTokens": 139,
+      "completionTokens": 51,
+      "cost": 0.000013707,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "baseten/fp4/us",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 267,
+      "totalMs": 531,
+      "tokensPerSec": 201,
+      "promptTokens": 146,
+      "completionTokens": 53,
+      "cost": 0.0000411,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "deepinfra/bf16",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 738,
+      "totalMs": 2639,
+      "tokensPerSec": 26,
+      "promptTokens": 128,
+      "completionTokens": 50,
+      "cost": 0.000013236,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "baseten/fp4/us",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 369,
+      "totalMs": 657,
+      "tokensPerSec": 160,
+      "promptTokens": 146,
+      "completionTokens": 46,
+      "cost": 0.0000376,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "baseten/fp4",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 398,
+      "totalMs": 668,
+      "tokensPerSec": 196,
+      "promptTokens": 146,
+      "completionTokens": 53,
+      "cost": 0.0000411,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "parasail/fp4",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 151
+    },
+    {
+      "targetId": "mancer/fp8",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mancer 2",
+      "ttftMs": 809,
+      "totalMs": 1990,
+      "tokensPerSec": 42,
+      "promptTokens": 139,
+      "completionTokens": 50,
+      "cost": 0.0000175,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "baseten/fp4",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 391,
+      "totalMs": 565,
+      "tokensPerSec": 276,
+      "promptTokens": 146,
+      "completionTokens": 48,
+      "cost": 0.0000386,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "mancer/fp8",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mancer 2",
+      "ttftMs": 652,
+      "totalMs": 1915,
+      "tokensPerSec": 38,
+      "promptTokens": 139,
+      "completionTokens": 48,
+      "cost": 0.0000175,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "sambanova",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "SambaNova",
+      "ttftMs": 486,
+      "totalMs": 498,
+      "tokensPerSec": null,
+      "promptTokens": 139,
+      "completionTokens": 50,
+      "cost": 0.00006696,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\"city\": \"Paris\", \"unit\": \"c\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "nebius/fp4",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": false,
+      "failure": "invalid_tool_args_json",
+      "detail": "{ \"city\": \"Paris\", \"unit\": \"c\" ",
+      "availability": false,
+      "servedBy": "Nebius",
+      "ttftMs": 247,
+      "totalMs": 380,
+      "tokensPerSec": 451,
+      "promptTokens": 139,
+      "completionTokens": 60,
+      "cost": 0.00005685,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n"
+        },
+        {
+          "name": "",
+          "arguments": "}"
+        }
+      ]
+    },
+    {
+      "targetId": "nebius/fp4",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": false,
+      "failure": "invalid_tool_args_json",
+      "detail": "{ \"city\": \"Paris\", \"unit\": \"",
+      "availability": false,
+      "servedBy": "Nebius",
+      "ttftMs": 445,
+      "totalMs": 516,
+      "tokensPerSec": 692,
+      "promptTokens": 139,
+      "completionTokens": 49,
+      "cost": 0.00005025,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \""
+        },
+        {
+          "name": "",
+          "arguments": "c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "sambanova",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "SambaNova",
+      "ttftMs": 620,
+      "totalMs": 648,
+      "tokensPerSec": null,
+      "promptTokens": 139,
+      "completionTokens": 50,
+      "cost": 0.00006696,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\"city\": \"Paris\", \"unit\": \"c\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "parasail/fp4",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 457,
+      "totalMs": 954,
+      "tokensPerSec": 113,
+      "promptTokens": 139,
+      "completionTokens": 56,
+      "cost": 0.00005158,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "deepinfra/turbo",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 390,
+      "totalMs": 581,
+      "tokensPerSec": 310,
+      "promptTokens": 128,
+      "completionTokens": 59,
+      "cost": 0.0000546,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "deepinfra/turbo",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 350,
+      "totalMs": 539,
+      "tokensPerSec": 313,
+      "promptTokens": 128,
+      "completionTokens": 59,
+      "cost": 0.0000546,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "groq",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Groq",
+      "ttftMs": 356,
+      "totalMs": 465,
+      "tokensPerSec": 514,
+      "promptTokens": 145,
+      "completionTokens": 56,
+      "cost": 0.00005535,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\"city\":\"Paris\",\"unit\":\"c\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "groq",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Groq",
+      "ttftMs": 301,
+      "totalMs": 393,
+      "tokensPerSec": 605,
+      "promptTokens": 145,
+      "completionTokens": 56,
+      "cost": 0.00005535,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\"city\":\"Paris\",\"unit\":\"c\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "phala",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Phala",
+      "ttftMs": 670,
+      "totalMs": 925,
+      "tokensPerSec": 219,
+      "promptTokens": 139,
+      "completionTokens": 56,
+      "cost": 0.00005445,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "mara",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mara",
+      "ttftMs": 448,
+      "totalMs": 448,
+      "tokensPerSec": null,
+      "promptTokens": 139,
+      "completionTokens": 50,
+      "cost": 0.00005835,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\"city\": \"Paris\", \"unit\": \"c\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "phala",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Phala",
+      "ttftMs": 684,
+      "totalMs": 991,
+      "tokensPerSec": 186,
+      "promptTokens": 139,
+      "completionTokens": 57,
+      "cost": 0.00005505,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "cerebras/fp16",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Cerebras",
+      "ttftMs": 175,
+      "totalMs": 216,
+      "tokensPerSec": null,
+      "promptTokens": 139,
+      "completionTokens": 49,
+      "cost": 0.0000854,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\"city\":\"Paris\",\"unit\":\"c\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "cerebras/fp16",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Cerebras",
+      "ttftMs": 208,
+      "totalMs": 209,
+      "tokensPerSec": null,
+      "promptTokens": 139,
+      "completionTokens": 49,
+      "cost": 0.0000854,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\"city\":\"Paris\",\"unit\":\"c\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "together",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Together",
+      "ttftMs": 261,
+      "totalMs": 1035,
+      "tokensPerSec": 99,
+      "promptTokens": 143,
+      "completionTokens": 77,
+      "cost": 0.00006765,
+      "output": "The current temperature in Paris is **13 °C**.",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "mara",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mara",
+      "ttftMs": 665,
+      "totalMs": 666,
+      "tokensPerSec": null,
+      "promptTokens": 139,
+      "completionTokens": 50,
+      "cost": 0.00005835,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\"city\": \"Paris\", \"unit\": \"c\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "venice/int4",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 288
+    },
+    {
+      "targetId": "default",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 583,
+      "totalMs": 812,
+      "tokensPerSec": 297,
+      "promptTokens": 139,
+      "completionTokens": 68,
+      "cost": 0.00005914,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "default",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 355,
+      "totalMs": 985,
+      "tokensPerSec": 108,
+      "promptTokens": 139,
+      "completionTokens": 68,
+      "cost": 0.0000613,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "together",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Together",
+      "ttftMs": 207,
+      "totalMs": 1974,
+      "tokensPerSec": 40,
+      "promptTokens": 143,
+      "completionTokens": 71,
+      "cost": 0.00006405,
+      "output": "The current temperature in Paris is **approximately 12 °C**.",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "dekallm/bf16",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 501
+    },
+    {
+      "targetId": "crusoe/bf16",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Crusoe",
+      "ttftMs": 193,
+      "totalMs": 601,
+      "tokensPerSec": 174,
+      "promptTokens": 206,
+      "completionTokens": 71,
+      "cost": 0.00002805,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"500 errors on checkout page for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "venice/int4",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 995
+    },
+    {
+      "targetId": "coreweave/fp4",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "CoreWeave",
+      "ttftMs": 387,
+      "totalMs": 1534,
+      "tokensPerSec": 62,
+      "promptTokens": 206,
+      "completionTokens": 71,
+      "cost": 0.00001825,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\"team\":\"payments\",\"title\":\"500 errors on checkout page for EU customers\",\"priority\":\"high\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "crusoe/bf16",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Crusoe",
+      "ttftMs": 232,
+      "totalMs": 566,
+      "tokensPerSec": 236,
+      "promptTokens": 206,
+      "completionTokens": 79,
+      "cost": 0.00003005,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page throwing 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "exacto",
+      "caseId": "single-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "AkashML",
+      "ttftMs": 815,
+      "totalMs": 1983,
+      "tokensPerSec": 48,
+      "promptTokens": 139,
+      "completionTokens": 56,
+      "cost": 0.000014642,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "novita/fp4",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Novita",
+      "ttftMs": 417,
+      "totalMs": 743,
+      "tokensPerSec": 208,
+      "promptTokens": 213,
+      "completionTokens": 68,
+      "cost": 0.00002765,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"priority\": \"high\",\n  \"team\": \"payments\",\n  \"title\": \"500 errors on checkout page for EU customers\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "exacto",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DekaLLM",
+      "ttftMs": 728,
+      "totalMs": 2762,
+      "tokensPerSec": 28,
+      "promptTokens": 139,
+      "completionTokens": 56,
+      "cost": 0.00001425,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "novita/fp4",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Novita",
+      "ttftMs": 500,
+      "totalMs": 1040,
+      "tokensPerSec": 161,
+      "promptTokens": 213,
+      "completionTokens": 87,
+      "cost": 0.0000324,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"priority\": \"high\",\n  \"team\": \"payments\",\n  \"title\": \"500 errors on checkout page for EU customers\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "coreweave/fp4",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "CoreWeave",
+      "ttftMs": 296,
+      "totalMs": 1695,
+      "tokensPerSec": 56,
+      "promptTokens": 206,
+      "completionTokens": 78,
+      "cost": 0.00001944,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\"team\":\"payments\",\"title\":\"500 errors on checkout page for EU customers\",\"priority\":\"high\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "baseten/fp4/us",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 364,
+      "totalMs": 695,
+      "tokensPerSec": 230,
+      "promptTokens": 213,
+      "completionTokens": 76,
+      "cost": 0.0000593,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page throwing 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "baseten/fp4/us",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 315,
+      "totalMs": 526,
+      "tokensPerSec": 365,
+      "promptTokens": 213,
+      "completionTokens": 77,
+      "cost": 0.0000598,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page throwing 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "baseten/fp4",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 480,
+      "totalMs": 743,
+      "tokensPerSec": 259,
+      "promptTokens": 213,
+      "completionTokens": 68,
+      "cost": 0.0000553,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "akashml/bf16",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "AkashML",
+      "ttftMs": 751,
+      "totalMs": 2966,
+      "tokensPerSec": 30,
+      "promptTokens": 206,
+      "completionTokens": 66,
+      "cost": 0.000018522,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"500 errors on checkout page for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "parasail/fp4",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 378,
+      "totalMs": 1064,
+      "tokensPerSec": 96,
+      "promptTokens": 206,
+      "completionTokens": 66,
+      "cost": 0.0000665,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"500 errors on checkout page for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "akashml/bf16",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "AkashML",
+      "ttftMs": 698,
+      "totalMs": 2317,
+      "tokensPerSec": 51,
+      "promptTokens": 206,
+      "completionTokens": 82,
+      "cost": 0.000021514,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"500 errors on checkout page for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "baseten/fp4",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 483,
+      "totalMs": 760,
+      "tokensPerSec": 227,
+      "promptTokens": 213,
+      "completionTokens": 63,
+      "cost": 0.0000528,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "sambanova",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "SambaNova",
+      "ttftMs": 419,
+      "totalMs": 449,
+      "tokensPerSec": null,
+      "promptTokens": 206,
+      "completionTokens": 89,
+      "cost": 0.00011339,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\"priority\": \"high\", \"team\": \"payments\", \"title\": \"500 errors on checkout page for EU customers\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "nebius/fp4",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": false,
+      "failure": "invalid_tool_args_json",
+      "detail": "{ \"team\": \"payments\", \"title\": \"500 errors on checkout page for EU customers\", \"priority\": \"",
+      "availability": false,
+      "servedBy": "Nebius",
+      "ttftMs": 539,
+      "totalMs": 666,
+      "tokensPerSec": 560,
+      "promptTokens": 206,
+      "completionTokens": 71,
+      "cost": 0.0000735,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"500 errors on checkout page for EU customers\",\n  \"priority\": \""
+        },
+        {
+          "name": "",
+          "arguments": "high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "nebius/fp4",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Nebius",
+      "ttftMs": 445,
+      "totalMs": 541,
+      "tokensPerSec": 686,
+      "promptTokens": 206,
+      "completionTokens": 66,
+      "cost": 0.0000705,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "mancer/fp8",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mancer 2",
+      "ttftMs": 946,
+      "totalMs": 1829,
+      "tokensPerSec": 79,
+      "promptTokens": 206,
+      "completionTokens": 70,
+      "cost": 0.0000275,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"500 errors on checkout page for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "deepinfra/bf16",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 872,
+      "totalMs": 3611,
+      "tokensPerSec": 26,
+      "promptTokens": 195,
+      "completionTokens": 70,
+      "cost": 0.000019115,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "mancer/fp8",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mancer 2",
+      "ttftMs": 510,
+      "totalMs": 1372,
+      "tokensPerSec": 81,
+      "promptTokens": 206,
+      "completionTokens": 70,
+      "cost": 0.0000275,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"500 errors on checkout page for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "groq",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Groq",
+      "ttftMs": 372,
+      "totalMs": 444,
+      "tokensPerSec": 918,
+      "promptTokens": 224,
+      "completionTokens": 66,
+      "cost": 0.0000732,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\"priority\":\"high\",\"team\":\"payments\",\"title\":\"Checkout page 500 errors for EU customers\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "groq",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Groq",
+      "ttftMs": 364,
+      "totalMs": 476,
+      "tokensPerSec": 591,
+      "promptTokens": 224,
+      "completionTokens": 66,
+      "cost": 0.0000732,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\"priority\":\"high\",\"team\":\"payments\",\"title\":\"Checkout page 500 errors for EU customers\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "parasail/fp4",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 388,
+      "totalMs": 897,
+      "tokensPerSec": 130,
+      "promptTokens": 206,
+      "completionTokens": 66,
+      "cost": 0.00006146,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "deepinfra/turbo",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 369,
+      "totalMs": 679,
+      "tokensPerSec": 252,
+      "promptTokens": 195,
+      "completionTokens": 78,
+      "cost": 0.00007605,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page returning 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "deepinfra/turbo",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 578,
+      "totalMs": 910,
+      "tokensPerSec": 234,
+      "promptTokens": 195,
+      "completionTokens": 78,
+      "cost": 0.00007605,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page throwing 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "cerebras/fp16",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Cerebras",
+      "ttftMs": 309,
+      "totalMs": 318,
+      "tokensPerSec": null,
+      "promptTokens": 206,
+      "completionTokens": 68,
+      "cost": 0.0001231,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\"team\":\"payments\",\"title\":\"500 errors on checkout page for EU customers\",\"priority\":\"high\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "cerebras/fp16",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Cerebras",
+      "ttftMs": 340,
+      "totalMs": 341,
+      "tokensPerSec": null,
+      "promptTokens": 206,
+      "completionTokens": 68,
+      "cost": 0.0001231,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\"team\":\"payments\",\"title\":\"500 errors on checkout page for EU customers\",\"priority\":\"high\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "mara",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mara",
+      "ttftMs": 416,
+      "totalMs": 738,
+      "tokensPerSec": 277,
+      "promptTokens": 206,
+      "completionTokens": 89,
+      "cost": 0.00009765,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\"priority\": \"high\", \"team\": \"payments\", \"title\": \"500 errors on checkout page for EU customers\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "venice/int4",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 383
+    },
+    {
+      "targetId": "phala",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Phala",
+      "ttftMs": 798,
+      "totalMs": 1341,
+      "tokensPerSec": 123,
+      "promptTokens": 213,
+      "completionTokens": 67,
+      "cost": 0.00007215,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"priority\": \"high\",\n  \"team\": \"payments\",\n  \"title\": \"500 errors on checkout page for EU customers\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "phala",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Phala",
+      "ttftMs": 886,
+      "totalMs": 1456,
+      "tokensPerSec": 117,
+      "promptTokens": 213,
+      "completionTokens": 67,
+      "cost": 0.00007215,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"priority\": \"high\",\n  \"team\": \"payments\",\n  \"title\": \"500 errors on checkout page for EU customers\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "mara",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mara",
+      "ttftMs": 661,
+      "totalMs": 978,
+      "tokensPerSec": 281,
+      "promptTokens": 206,
+      "completionTokens": 89,
+      "cost": 0.00009765,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\"priority\": \"high\", \"team\": \"payments\", \"title\": \"500 errors on checkout page for EU customers\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "together",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Together",
+      "ttftMs": 470,
+      "totalMs": 1383,
+      "tokensPerSec": 72,
+      "promptTokens": 201,
+      "completionTokens": 66,
+      "cost": 0.00006975,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page throwing 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "default",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 578,
+      "totalMs": 1275,
+      "tokensPerSec": 95,
+      "promptTokens": 206,
+      "completionTokens": 66,
+      "cost": 0.00006146,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "default",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 392,
+      "totalMs": 1063,
+      "tokensPerSec": 98,
+      "promptTokens": 206,
+      "completionTokens": 66,
+      "cost": 0.00006146,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "deepinfra/bf16",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 2910,
+      "totalMs": 5566,
+      "tokensPerSec": 26,
+      "promptTokens": 195,
+      "completionTokens": 70,
+      "cost": 0.000019115,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "venice/int4",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 161
+    },
+    {
+      "targetId": "coreweave/fp4",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 210
+    },
+    {
+      "targetId": "crusoe/bf16",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Crusoe",
+      "ttftMs": 163,
+      "totalMs": 811,
+      "tokensPerSec": 221,
+      "promptTokens": 172,
+      "completionTokens": 143,
+      "cost": 0.00004435,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "together",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Together",
+      "ttftMs": 173,
+      "totalMs": 1250,
+      "tokensPerSec": 105,
+      "promptTokens": 218,
+      "completionTokens": 113,
+      "cost": 0.0001005,
+      "output": "The ticket has been filed with the payments team as a high‑priority issue. Let me know if there’s anything else you need.",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page throwing 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "novita/fp4",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": false,
+      "failure": "rejects_valid_request",
+      "detail": "400 {\"error\":{\"message\":\"Provider returned error\",\"code\":400,\"metadata\":{\"raw\":\"{\\\"message\\\":\\\"invalid request error trace_id: 5852adcab974d88dcdf24e4bc9b887cf\\\",\\\"type\\\":\\\"invalid_request_error\\\"}\\n\"",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 270
+    },
+    {
+      "targetId": "dekallm/bf16",
+      "caseId": "single-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DekaLLM",
+      "ttftMs": 10006,
+      "totalMs": 13522,
+      "tokensPerSec": 16,
+      "promptTokens": 139,
+      "completionTokens": 56,
+      "cost": 0.00001425,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "get_weather",
+          "arguments": "{\n  \"city\": \"Paris\",\n  \"unit\": \"c\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "novita/fp4",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": false,
+      "failure": "rejects_valid_request",
+      "detail": "400 {\"error\":{\"message\":\"Provider returned error\",\"code\":400,\"metadata\":{\"raw\":\"{\\\"message\\\":\\\"invalid request error trace_id: 6635a2ecf53f0a6f28e27792be83434b\\\",\\\"type\\\":\\\"invalid_request_error\\\"}\\n\"",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 389
+    },
+    {
+      "targetId": "sambanova",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "SambaNova",
+      "ttftMs": 4367,
+      "totalMs": 4398,
+      "tokensPerSec": null,
+      "promptTokens": 206,
+      "completionTokens": 89,
+      "cost": 0.00011339,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\"priority\": \"high\", \"team\": \"payments\", \"title\": \"500 errors on checkout page for EU customers\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "crusoe/bf16",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Crusoe",
+      "ttftMs": 192,
+      "totalMs": 695,
+      "tokensPerSec": 239,
+      "promptTokens": 172,
+      "completionTokens": 120,
+      "cost": 0.0000386,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "exacto",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 373,
+      "totalMs": 1007,
+      "tokensPerSec": 104,
+      "promptTokens": 206,
+      "completionTokens": 66,
+      "cost": 0.00006146,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"Checkout page 500 errors for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "exacto",
+      "caseId": "pick-the-right-tool",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 364,
+      "totalMs": 1122,
+      "tokensPerSec": 103,
+      "promptTokens": 206,
+      "completionTokens": 78,
+      "cost": 0.00007046,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"500 errors on checkout page for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "baseten/fp4",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 401,
+      "totalMs": 847,
+      "tokensPerSec": 299,
+      "promptTokens": 179,
+      "completionTokens": 133,
+      "cost": 0.0000844,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "baseten/fp4/us",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 282,
+      "totalMs": 1057,
+      "tokensPerSec": 172,
+      "promptTokens": 179,
+      "completionTokens": 133,
+      "cost": 0.0000844,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "baseten/fp4/us",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 280,
+      "totalMs": 1170,
+      "tokensPerSec": 150,
+      "promptTokens": 179,
+      "completionTokens": 134,
+      "cost": 0.0000849,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "sambanova",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "SambaNova",
+      "ttftMs": 415,
+      "totalMs": 525,
+      "tokensPerSec": 1400,
+      "promptTokens": 172,
+      "completionTokens": 154,
+      "cost": 0.00017038,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\"attendees\": [\"ana@example.com\", \"raj@example.com\"], \"duration_minutes\": 30, \"start\": \"2026-11-03T15:00:00Z\", \"title\": \"Launch review\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "akashml/bf16",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 1385
+    },
+    {
+      "targetId": "nebius/fp4",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": false,
+      "failure": "invalid_tool_args_json",
+      "detail": "{ \"title\": \"Launch review\", \"start\": \"2026-11-03T15:00:00Z\", \"duration_minutes\": 30, \"attendees\": [ \"ana@example.com\", \"raj@example.com\" ",
+      "availability": false,
+      "servedBy": "Nebius",
+      "ttftMs": 292,
+      "totalMs": 550,
+      "tokensPerSec": 560,
+      "promptTokens": 172,
+      "completionTokens": 144,
+      "cost": 0.0001122,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n "
+        },
+        {
+          "name": "",
+          "arguments": " ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "baseten/fp4",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 293,
+      "totalMs": 1024,
+      "tokensPerSec": 182,
+      "promptTokens": 179,
+      "completionTokens": 133,
+      "cost": 0.0000844,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "nebius/fp4",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": false,
+      "failure": "invalid_tool_args_json",
+      "detail": "{ \"title\": \"Launch review\", \"start\": \"2026-11-03T15:00:00Z\", \"duration_minutes\": 30, \"attendees\": [ \"ana@example.com\", \"raj@example.com\" ",
+      "availability": false,
+      "servedBy": "Nebius",
+      "ttftMs": 310,
+      "totalMs": 558,
+      "tokensPerSec": 545,
+      "promptTokens": 172,
+      "completionTokens": 135,
+      "cost": 0.0001068,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n "
+        },
+        {
+          "name": "",
+          "arguments": " ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "dekallm/bf16",
+      "caseId": "pick-the-right-tool",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DekaLLM",
+      "ttftMs": 793,
+      "totalMs": 3882,
+      "tokensPerSec": 27,
+      "promptTokens": 206,
+      "completionTokens": 82,
+      "cost": 0.00002094,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_ticket",
+          "arguments": "{\n  \"team\": \"payments\",\n  \"title\": \"500 errors on checkout page for EU customers\",\n  \"priority\": \"high\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "parasail/fp4",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 359,
+      "totalMs": 1848,
+      "tokensPerSec": 114,
+      "promptTokens": 172,
+      "completionTokens": 170,
+      "cost": 0.0001411,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "groq",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Groq",
+      "ttftMs": 245,
+      "totalMs": 569,
+      "tokensPerSec": 513,
+      "promptTokens": 178,
+      "completionTokens": 166,
+      "cost": 0.0001263,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\"attendees\":[\"ana@example.com\",\"raj@example.com\"],\"duration_minutes\":30,\"start\":\"2026-11-03T15:00:00Z\",\"title\":\"Launch review\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "coreweave/fp4",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "CoreWeave",
+      "ttftMs": 463,
+      "totalMs": 2815,
+      "tokensPerSec": 57,
+      "promptTokens": 172,
+      "completionTokens": 135,
+      "cost": 0.00002811,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\"title\":\"Launch review\",\"start\":\"2026-11-03T15:00:00Z\",\"duration_minutes\":30,\"attendees\":[\"ana@example.com\",\"raj@example.com\"]}"
+        }
+      ]
+    },
+    {
+      "targetId": "parasail/fp4",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 264
+    },
+    {
+      "targetId": "groq",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Groq",
+      "ttftMs": 277,
+      "totalMs": 570,
+      "tokensPerSec": 529,
+      "promptTokens": 178,
+      "completionTokens": 155,
+      "cost": 0.0001197,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\"attendees\":[\"ana@example.com\",\"raj@example.com\"],\"duration_minutes\":30,\"start\":\"2026-11-03T15:00:00Z\",\"title\":\"Launch review\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "cerebras/fp16",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Cerebras",
+      "ttftMs": 327,
+      "totalMs": 383,
+      "tokensPerSec": 2520,
+      "promptTokens": 172,
+      "completionTokens": 140,
+      "cost": 0.0001652,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\"title\":\"Launch review\",\"start\":\"2026-11-03T15:00:00Z\",\"duration_minutes\":30,\"attendees\":[\"ana@example.com\",\"raj@example.com\"]}"
+        }
+      ]
+    },
+    {
+      "targetId": "cerebras/fp16",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Cerebras",
+      "ttftMs": 265,
+      "totalMs": 318,
+      "tokensPerSec": 2667,
+      "promptTokens": 172,
+      "completionTokens": 140,
+      "cost": 0.0001652,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\"title\":\"Launch review\",\"start\":\"2026-11-03T15:00:00Z\",\"duration_minutes\":30,\"attendees\":[\"ana@example.com\",\"raj@example.com\"]}"
+        }
+      ]
+    },
+    {
+      "targetId": "deepinfra/turbo",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 364,
+      "totalMs": 686,
+      "tokensPerSec": 369,
+      "promptTokens": 161,
+      "completionTokens": 119,
+      "cost": 0.00009555,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "venice/int4",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 203
+    },
+    {
+      "targetId": "deepinfra/turbo",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 318,
+      "totalMs": 791,
+      "tokensPerSec": 252,
+      "promptTokens": 161,
+      "completionTokens": 119,
+      "cost": 0.00009555,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "mancer/fp8",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mancer 2",
+      "ttftMs": 607,
+      "totalMs": 1948,
+      "tokensPerSec": 89,
+      "promptTokens": 172,
+      "completionTokens": 119,
+      "cost": 0.0000375,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "mara",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mara",
+      "ttftMs": 632,
+      "totalMs": 1003,
+      "tokensPerSec": 415,
+      "promptTokens": 172,
+      "completionTokens": 154,
+      "cost": 0.0001413,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\"attendees\": [\"ana@example.com\", \"raj@example.com\"], \"duration_minutes\": 30, \"start\": \"2026-11-03T15:00:00Z\", \"title\": \"Launch review\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "mara",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mara",
+      "ttftMs": 459,
+      "totalMs": 869,
+      "tokensPerSec": 376,
+      "promptTokens": 172,
+      "completionTokens": 154,
+      "cost": 0.0001413,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\"attendees\": [\"ana@example.com\", \"raj@example.com\"], \"duration_minutes\": 30, \"start\": \"2026-11-03T15:00:00Z\", \"title\": \"Launch review\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "mancer/fp8",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mancer 2",
+      "ttftMs": 1705,
+      "totalMs": 3413,
+      "tokensPerSec": 84,
+      "promptTokens": 172,
+      "completionTokens": 143,
+      "cost": 0.0000425,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "phala",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Phala",
+      "ttftMs": 1243,
+      "totalMs": 1985,
+      "tokensPerSec": 203,
+      "promptTokens": 179,
+      "completionTokens": 151,
+      "cost": 0.00011745,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ],\n  \"duration_minutes\": 30,\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"title\": \"Launch review\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "together",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Together",
+      "ttftMs": 301,
+      "totalMs": 1510,
+      "tokensPerSec": 150,
+      "promptTokens": 179,
+      "completionTokens": 182,
+      "cost": 0.00013605,
+      "output": "Your 30‑minute “Launch review” sync has been scheduled for 2026‑11‑03 at 15:00 UTC with Ana and Raj. Let me know if you need anything else!",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "venice/int4",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 238
+    },
+    {
+      "targetId": "phala",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Phala",
+      "ttftMs": 598,
+      "totalMs": 2329,
+      "tokensPerSec": 88,
+      "promptTokens": 179,
+      "completionTokens": 152,
+      "cost": 0.00011805,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ],\n  \"duration_minutes\": 30,\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"title\": \"Launch review\"\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "crusoe/bf16",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Crusoe",
+      "ttftMs": 176,
+      "totalMs": 453,
+      "tokensPerSec": 195,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.00002055,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "novita/fp4",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": false,
+      "failure": "rejects_valid_request",
+      "detail": "400 {\"error\":{\"message\":\"Provider returned error\",\"code\":400,\"metadata\":{\"raw\":\"{\\\"message\\\":\\\"invalid request error trace_id: b005313195f861975bb425734966f3cb\\\",\\\"type\\\":\\\"invalid_request_error\\\"}\\n\"",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 323
+    },
+    {
+      "targetId": "akashml/bf16",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "AkashML",
+      "ttftMs": 1019,
+      "totalMs": 5865,
+      "tokensPerSec": 30,
+      "promptTokens": 172,
+      "completionTokens": 143,
+      "cost": 0.000031901,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "coreweave/fp4",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "CoreWeave",
+      "ttftMs": 317,
+      "totalMs": 1115,
+      "tokensPerSec": 68,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.00001341,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "deepinfra/bf16",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 747,
+      "totalMs": 4969,
+      "tokensPerSec": 28,
+      "promptTokens": 161,
+      "completionTokens": 120,
+      "cost": 0.000026357,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "novita/fp4",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": false,
+      "failure": "rejects_valid_request",
+      "detail": "400 {\"error\":{\"message\":\"Provider returned error\",\"code\":400,\"metadata\":{\"raw\":\"{\\\"message\\\":\\\"invalid request error trace_id: 89c547760fa1d7c0e8803adb4b33b1a3\\\",\\\"type\\\":\\\"invalid_request_error\\\"}\\n\"",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 278
+    },
+    {
+      "targetId": "dekallm/bf16",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 463
+    },
+    {
+      "targetId": "crusoe/bf16",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Crusoe",
+      "ttftMs": 222,
+      "totalMs": 472,
+      "tokensPerSec": 215,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.00002055,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "sambanova",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "SambaNova",
+      "ttftMs": 622,
+      "totalMs": 723,
+      "tokensPerSec": 1518,
+      "promptTokens": 172,
+      "completionTokens": 154,
+      "cost": 0.00017038,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\"attendees\": [\"ana@example.com\", \"raj@example.com\"], \"duration_minutes\": 30, \"start\": \"2026-11-03T15:00:00Z\", \"title\": \"Launch review\"}"
+        }
+      ]
+    },
+    {
+      "targetId": "baseten/fp4",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 308,
+      "totalMs": 528,
+      "tokensPerSec": 218,
+      "promptTokens": 148,
+      "completionTokens": 48,
+      "cost": 0.0000388,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "baseten/fp4/us",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 289,
+      "totalMs": 438,
+      "tokensPerSec": 323,
+      "promptTokens": 148,
+      "completionTokens": 48,
+      "cost": 0.0000388,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "together",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Together",
+      "ttftMs": 321,
+      "totalMs": 1996,
+      "tokensPerSec": 112,
+      "promptTokens": 179,
+      "completionTokens": 187,
+      "cost": 0.00013905,
+      "output": "Your 30‑minute “Launch review” sync has been scheduled for 2026‑11‑03 at 15:00 UTC with Ana and Raj. Let me know if you need anything else!",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "exacto",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 390,
+      "totalMs": 1503,
+      "tokensPerSec": 129,
+      "promptTokens": 172,
+      "completionTokens": 144,
+      "cost": 0.000118,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "sambanova",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "SambaNova",
+      "ttftMs": 575,
+      "totalMs": 575,
+      "tokensPerSec": null,
+      "promptTokens": 141,
+      "completionTokens": 53,
+      "cost": 0.00007009,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "baseten/fp4/us",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 361,
+      "totalMs": 594,
+      "tokensPerSec": 205,
+      "promptTokens": 148,
+      "completionTokens": 48,
+      "cost": 0.0000388,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "exacto",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 370,
+      "totalMs": 1508,
+      "tokensPerSec": 131,
+      "promptTokens": 172,
+      "completionTokens": 149,
+      "cost": 0.00012175,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "default",
+      "caseId": "nested-args",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "AkashML",
+      "ttftMs": 1636,
+      "totalMs": 4226,
+      "tokensPerSec": 46,
+      "promptTokens": 172,
+      "completionTokens": 120,
+      "cost": 0.0000276,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "nebius/fp4",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Nebius",
+      "ttftMs": 241,
+      "totalMs": 328,
+      "tokensPerSec": 620,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.00005355,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "parasail/fp4",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 388,
+      "totalMs": 522,
+      "tokensPerSec": 402,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.00005028,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "dekallm/bf16",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 537
+    },
+    {
+      "targetId": "nebius/fp4",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Nebius",
+      "ttftMs": 409,
+      "totalMs": 580,
+      "tokensPerSec": 316,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.00005355,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "baseten/fp4",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 342,
+      "totalMs": 744,
+      "tokensPerSec": 119,
+      "promptTokens": 148,
+      "completionTokens": 48,
+      "cost": 0.0000388,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "groq",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Groq",
+      "ttftMs": 363,
+      "totalMs": 478,
+      "tokensPerSec": 460,
+      "promptTokens": 147,
+      "completionTokens": 53,
+      "cost": 0.00005385,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "parasail/fp4",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 354,
+      "totalMs": 478,
+      "tokensPerSec": 434,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.00004884,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "cerebras/fp16",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Cerebras",
+      "ttftMs": 336,
+      "totalMs": 337,
+      "tokensPerSec": null,
+      "promptTokens": 141,
+      "completionTokens": 48,
+      "cost": 0.00008535,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "venice/int4",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 147
+    },
+    {
+      "targetId": "cerebras/fp16",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Cerebras",
+      "ttftMs": 535,
+      "totalMs": 536,
+      "tokensPerSec": null,
+      "promptTokens": 141,
+      "completionTokens": 48,
+      "cost": 0.00008535,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "groq",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Groq",
+      "ttftMs": 694,
+      "totalMs": 773,
+      "tokensPerSec": 685,
+      "promptTokens": 147,
+      "completionTokens": 54,
+      "cost": 0.00005445,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "deepinfra/turbo",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 377,
+      "totalMs": 555,
+      "tokensPerSec": 303,
+      "promptTokens": 130,
+      "completionTokens": 54,
+      "cost": 0.0000519,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "deepinfra/turbo",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 630,
+      "totalMs": 780,
+      "tokensPerSec": 359,
+      "promptTokens": 130,
+      "completionTokens": 54,
+      "cost": 0.0000519,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "akashml/bf16",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "AkashML",
+      "ttftMs": 1567,
+      "totalMs": 2365,
+      "tokensPerSec": 68,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.000014328,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "coreweave/fp4",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "CoreWeave",
+      "ttftMs": 412,
+      "totalMs": 1653,
+      "tokensPerSec": 44,
+      "promptTokens": 141,
+      "completionTokens": 55,
+      "cost": 0.00001358,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "mara",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mara",
+      "ttftMs": 923,
+      "totalMs": 965,
+      "tokensPerSec": null,
+      "promptTokens": 141,
+      "completionTokens": 53,
+      "cost": 0.0000609,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "mancer/fp8",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mancer 2",
+      "ttftMs": 584,
+      "totalMs": 1075,
+      "tokensPerSec": 110,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.00002,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "venice/int4",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 185
+    },
+    {
+      "targetId": "phala",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Phala",
+      "ttftMs": 536,
+      "totalMs": 738,
+      "tokensPerSec": 247,
+      "promptTokens": 148,
+      "completionTokens": 50,
+      "cost": 0.0000522,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "mara",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mara",
+      "ttftMs": 779,
+      "totalMs": 820,
+      "tokensPerSec": null,
+      "promptTokens": 141,
+      "completionTokens": 53,
+      "cost": 0.0000609,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "together",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Together",
+      "ttftMs": 156,
+      "totalMs": 509,
+      "tokensPerSec": 153,
+      "promptTokens": 143,
+      "completionTokens": 54,
+      "cost": 0.00005385,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "default",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "AkashML",
+      "ttftMs": 2704,
+      "totalMs": 6722,
+      "tokensPerSec": 36,
+      "promptTokens": 172,
+      "completionTokens": 144,
+      "cost": 0.000032088,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "novita/fp4",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": false,
+      "failure": "rejects_valid_request",
+      "detail": "400 {\"error\":{\"message\":\"Provider returned error\",\"code\":400,\"metadata\":{\"raw\":\"{\\\"message\\\":\\\"invalid request error trace_id: 77e9ae07a067f3d9fe4142113dfe061a\\\",\\\"type\\\":\\\"invalid_request_error\\\"}\\n\"",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 296
+    },
+    {
+      "targetId": "phala",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": false,
+      "failure": "rejects_valid_request",
+      "detail": "400 {\"error\":{\"message\":\"Provider returned error\",\"code\":400,\"metadata\":{\"raw\":\"{\\\"error\\\":{\\\"message\\\":\\\"The request was rejected as invalid\\\",\\\"type\\\":\\\"invalid_request_error\\\",\\\"code\\\":null,\\\"param",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 500
+    },
+    {
+      "targetId": "crusoe/bf16",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Crusoe",
+      "ttftMs": 302,
+      "totalMs": 555,
+      "tokensPerSec": 214,
+      "promptTokens": 170,
+      "completionTokens": 54,
+      "cost": 0.000022,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. 🌧️ Stay dry if you’re heading out!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "mancer/fp8",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mancer 2",
+      "ttftMs": 838,
+      "totalMs": 1292,
+      "tokensPerSec": 119,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.00002,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "novita/fp4",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 338
+    },
+    {
+      "targetId": "dekallm/bf16",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 448
+    },
+    {
+      "targetId": "sambanova",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "SambaNova",
+      "ttftMs": 432,
+      "totalMs": 433,
+      "tokensPerSec": null,
+      "promptTokens": 141,
+      "completionTokens": 53,
+      "cost": 0.00007009,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "crusoe/bf16",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Crusoe",
+      "ttftMs": 172,
+      "totalMs": 484,
+      "tokensPerSec": 138,
+      "promptTokens": 170,
+      "completionTokens": 43,
+      "cost": 0.00001925,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**.",
+      "toolCalls": []
+    },
+    {
+      "targetId": "baseten/fp4",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 420,
+      "totalMs": 668,
+      "tokensPerSec": 262,
+      "promptTokens": 176,
+      "completionTokens": 65,
+      "cost": 0.0000501,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. 🌧️ Stay dry if you’re heading out!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "coreweave/fp4",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "CoreWeave",
+      "ttftMs": 435,
+      "totalMs": 1207,
+      "tokensPerSec": 63,
+      "promptTokens": 173,
+      "completionTokens": 49,
+      "cost": 0.00001352,
+      "output": "The current weather in **Tokyo** is **18 °C** with **light rain**. 🌧️ Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "baseten/fp4/us",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 388,
+      "totalMs": 606,
+      "tokensPerSec": 207,
+      "promptTokens": 176,
+      "completionTokens": 45,
+      "cost": 0.0000401,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. 🌧️ Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "exacto",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 411,
+      "totalMs": 602,
+      "tokensPerSec": 282,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.00004884,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "together",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Together",
+      "ttftMs": 248,
+      "totalMs": 614,
+      "tokensPerSec": 148,
+      "promptTokens": 143,
+      "completionTokens": 54,
+      "cost": 0.00005385,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "akashml/bf16",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "AkashML",
+      "ttftMs": 1110,
+      "totalMs": 1791,
+      "tokensPerSec": 79,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.000014328,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "sambanova",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "SambaNova",
+      "ttftMs": 454,
+      "totalMs": 523,
+      "tokensPerSec": 1291,
+      "promptTokens": 172,
+      "completionTokens": 89,
+      "cost": 0.00010863,
+      "output": "The current weather in **Tokyo** is:\n\n- **Temperature:** 18 °C  \n- **Conditions:** Light rain  \n\nLooks like a cool, drizzly day—perfect for a cozy café visit or a walk with an umbrella! Let me know if you’d like a forecast for the next few days or any other details.",
+      "toolCalls": []
+    },
+    {
+      "targetId": "baseten/fp4/us",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 346,
+      "totalMs": 648,
+      "tokensPerSec": 225,
+      "promptTokens": 176,
+      "completionTokens": 68,
+      "cost": 0.0000516,
+      "output": "Sure thing! In Tokyo right now it’s about **18 °C** with **light rain**. 🌧️ If you’re heading out, you might want to bring an umbrella or a light rain jacket. Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "deepinfra/bf16",
+      "caseId": "nested-args",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 773,
+      "totalMs": 7950,
+      "tokensPerSec": 17,
+      "promptTokens": 161,
+      "completionTokens": 120,
+      "cost": 0.000026357,
+      "output": "",
+      "toolCalls": [
+        {
+          "name": "create_event",
+          "arguments": "{\n  \"title\": \"Launch review\",\n  \"start\": \"2026-11-03T15:00:00Z\",\n  \"duration_minutes\": 30,\n  \"attendees\": [\n    \"ana@example.com\",\n    \"raj@example.com\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "targetId": "nebius/fp4",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Nebius",
+      "ttftMs": 449,
+      "totalMs": 517,
+      "tokensPerSec": 718,
+      "promptTokens": 170,
+      "completionTokens": 49,
+      "cost": 0.0000549,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. 🌧️ Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "exacto",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 482,
+      "totalMs": 849,
+      "tokensPerSec": 147,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.00004884,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "default",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 388,
+      "totalMs": 681,
+      "tokensPerSec": 184,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.00004884,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "parasail/fp4",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 332,
+      "totalMs": 713,
+      "tokensPerSec": 186,
+      "promptTokens": 170,
+      "completionTokens": 71,
+      "cost": 0.00006521,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. 🌧️ Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "groq",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Groq",
+      "ttftMs": 295,
+      "totalMs": 422,
+      "tokensPerSec": 599,
+      "promptTokens": 170,
+      "completionTokens": 76,
+      "cost": 0.0000711,
+      "output": "Sure thing! In Tokyo right now it’s about **18 °C (64 °F)** with **light rain**. 🌧️ If you’re heading out, you might want to bring an umbrella or a light rain jacket. Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "cerebras/fp16",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Cerebras",
+      "ttftMs": 285,
+      "totalMs": 286,
+      "tokensPerSec": null,
+      "promptTokens": 172,
+      "completionTokens": 44,
+      "cost": 0.0000932,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "baseten/fp4",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "BaseTen",
+      "ttftMs": 432,
+      "totalMs": 526,
+      "tokensPerSec": 455,
+      "promptTokens": 176,
+      "completionTokens": 43,
+      "cost": 0.0000391,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. 🌧️ Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "nebius/fp4",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Nebius",
+      "ttftMs": 433,
+      "totalMs": 663,
+      "tokensPerSec": 213,
+      "promptTokens": 170,
+      "completionTokens": 49,
+      "cost": 0.0000549,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. 🌧️ Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "cerebras/fp16",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Cerebras",
+      "ttftMs": 217,
+      "totalMs": 218,
+      "tokensPerSec": null,
+      "promptTokens": 172,
+      "completionTokens": 44,
+      "cost": 0.0000932,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "coreweave/fp4",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 169
+    },
+    {
+      "targetId": "parasail/fp4",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 369,
+      "totalMs": 691,
+      "tokensPerSec": 220,
+      "promptTokens": 170,
+      "completionTokens": 71,
+      "cost": 0.00006305,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. 🌧️ Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "groq",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Groq",
+      "ttftMs": 412,
+      "totalMs": 549,
+      "tokensPerSec": 557,
+      "promptTokens": 170,
+      "completionTokens": 76,
+      "cost": 0.0000711,
+      "output": "Sure thing! In Tokyo right now it’s about **18 °C (64 °F)** with **light rain**. 🌧️ If you’re heading out, you might want to bring an umbrella or a light rain jacket. Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "deepinfra/bf16",
+      "caseId": "no-tool-needed",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 860,
+      "totalMs": 2983,
+      "tokensPerSec": 25,
+      "promptTokens": 130,
+      "completionTokens": 54,
+      "cost": 0.00001399,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "deepinfra/turbo",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 479,
+      "totalMs": 795,
+      "tokensPerSec": 146,
+      "promptTokens": 159,
+      "completionTokens": 46,
+      "cost": 0.00005145,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "deepinfra/turbo",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 446,
+      "totalMs": 766,
+      "tokensPerSec": 144,
+      "promptTokens": 159,
+      "completionTokens": 46,
+      "cost": 0.00005145,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "together",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": false,
+      "failure": "rejects_valid_request",
+      "detail": "400 {\"error\":{\"message\":\"Provider returned error\",\"code\":400,\"metadata\":{\"raw\":\"{\\n  \\\"id\\\": \\\"p5P44pk-fdNmn-0e5a47e2-aws_ue1\\\",\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"prompt: prompt cannot be empty\\\",\\n",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 273
+    },
+    {
+      "targetId": "mara",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mara",
+      "ttftMs": 396,
+      "totalMs": 765,
+      "tokensPerSec": 241,
+      "promptTokens": 172,
+      "completionTokens": 89,
+      "cost": 0.00009255,
+      "output": "The current weather in **Tokyo** is:\n\n- **Temperature:** 18 °C  \n- **Conditions:** Light rain  \n\nLooks like a cool, drizzly day—perfect for a cozy café visit or a walk with an umbrella! Let me know if you’d like a forecast for the next few days or any other details.",
+      "toolCalls": []
+    },
+    {
+      "targetId": "mara",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mara",
+      "ttftMs": 403,
+      "totalMs": 723,
+      "tokensPerSec": 278,
+      "promptTokens": 172,
+      "completionTokens": 89,
+      "cost": 0.00009255,
+      "output": "The current weather in **Tokyo** is:\n\n- **Temperature:** 18 °C  \n- **Conditions:** Light rain  \n\nLooks like a cool, drizzly day—perfect for a cozy café visit or a walk with an umbrella! Let me know if you’d like a forecast for the next few days or any other details.",
+      "toolCalls": []
+    },
+    {
+      "targetId": "default",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 468,
+      "totalMs": 966,
+      "tokensPerSec": 108,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.00004884,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "dekallm/bf16",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DekaLLM",
+      "ttftMs": 614,
+      "totalMs": 2604,
+      "tokensPerSec": 27,
+      "promptTokens": 141,
+      "completionTokens": 54,
+      "cost": 0.00001395,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "mancer/fp8",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mancer 2",
+      "ttftMs": 443,
+      "totalMs": 1050,
+      "tokensPerSec": 76,
+      "promptTokens": 170,
+      "completionTokens": 46,
+      "cost": 0.00002,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "mancer/fp8",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Mancer 2",
+      "ttftMs": 1091,
+      "totalMs": 1826,
+      "tokensPerSec": 77,
+      "promptTokens": 170,
+      "completionTokens": 57,
+      "cost": 0.0000225,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**.",
+      "toolCalls": []
+    },
+    {
+      "targetId": "sambanova",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "SambaNova",
+      "ttftMs": 605,
+      "totalMs": 671,
+      "tokensPerSec": 1342,
+      "promptTokens": 172,
+      "completionTokens": 89,
+      "cost": 0.00010863,
+      "output": "The current weather in **Tokyo** is:\n\n- **Temperature:** 18 °C  \n- **Conditions:** Light rain  \n\nLooks like a cool, drizzly day—perfect for a cozy café visit or a walk with an umbrella! Let me know if you’d like a forecast for the next few days or any other details.",
+      "toolCalls": []
+    },
+    {
+      "targetId": "akashml/bf16",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "AkashML",
+      "ttftMs": 1138,
+      "totalMs": 2576,
+      "tokensPerSec": 34,
+      "promptTokens": 170,
+      "completionTokens": 49,
+      "cost": 0.000014263,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. 🌧️ Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "together",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": false,
+      "failure": "rejects_valid_request",
+      "detail": "400 {\"error\":{\"message\":\"Provider returned error\",\"code\":400,\"metadata\":{\"raw\":\"{\\n  \\\"id\\\": \\\"p5P45FH-z1gNr-cf70be3f-aws_ue1\\\",\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"prompt: prompt cannot be empty\\\",\\n",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 579
+    },
+    {
+      "targetId": "exacto",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 358,
+      "totalMs": 1009,
+      "tokensPerSec": 107,
+      "promptTokens": 170,
+      "completionTokens": 70,
+      "cost": 0.0000623,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "exacto",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 430,
+      "totalMs": 860,
+      "tokensPerSec": 161,
+      "promptTokens": 170,
+      "completionTokens": 69,
+      "cost": 0.00006155,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. 🌧️ Stay dry if you’re heading out!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "default",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 342,
+      "totalMs": 831,
+      "tokensPerSec": 139,
+      "promptTokens": 170,
+      "completionTokens": 68,
+      "cost": 0.0000608,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "dekallm/bf16",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": false,
+      "failure": "rate_limited",
+      "detail": "429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your r",
+      "availability": true,
+      "servedBy": null,
+      "totalMs": 546
+    },
+    {
+      "targetId": "default",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Parasail",
+      "ttftMs": 368,
+      "totalMs": 797,
+      "tokensPerSec": 182,
+      "promptTokens": 170,
+      "completionTokens": 78,
+      "cost": 0.0000683,
+      "output": "In Tokyo right now it’s about **18 °C** with **light rain** falling. 🌧️ Stay dry if you’re heading out!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "dekallm/bf16",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DekaLLM",
+      "ttftMs": 590,
+      "totalMs": 3186,
+      "tokensPerSec": 27,
+      "promptTokens": 170,
+      "completionTokens": 71,
+      "cost": 0.00001788,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. 🌧️ Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "akashml/bf16",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "AkashML",
+      "ttftMs": 1613,
+      "totalMs": 2455,
+      "tokensPerSec": 58,
+      "promptTokens": 170,
+      "completionTokens": 49,
+      "cost": 0.000014263,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. 🌧️ Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "deepinfra/bf16",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 849,
+      "totalMs": 2721,
+      "tokensPerSec": 29,
+      "promptTokens": 159,
+      "completionTokens": 54,
+      "cost": 0.000015063,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**.",
+      "toolCalls": []
+    },
+    {
+      "targetId": "phala",
+      "caseId": "multi-turn-tool-result",
+      "run": 1,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Phala",
+      "ttftMs": 5543,
+      "totalMs": 5777,
+      "tokensPerSec": 300,
+      "promptTokens": 170,
+      "completionTokens": 70,
+      "cost": 0.0000675,
+      "output": "Sure! In Tokyo right now it’s about **18 °C** with **light rain**. 🌧️ If you’re heading out, you might want to bring an umbrella or a light jacket. Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "deepinfra/bf16",
+      "caseId": "no-tool-needed",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 1886,
+      "totalMs": 4066,
+      "tokensPerSec": 25,
+      "promptTokens": 130,
+      "completionTokens": 54,
+      "cost": 0.00001399,
+      "output": "51",
+      "toolCalls": []
+    },
+    {
+      "targetId": "phala",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "Phala",
+      "ttftMs": 5861,
+      "totalMs": 6096,
+      "tokensPerSec": 297,
+      "promptTokens": 170,
+      "completionTokens": 70,
+      "cost": 0.0000675,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**. Stay dry!",
+      "toolCalls": []
+    },
+    {
+      "targetId": "deepinfra/bf16",
+      "caseId": "multi-turn-tool-result",
+      "run": 2,
+      "pass": true,
+      "failure": null,
+      "detail": null,
+      "availability": false,
+      "servedBy": "DeepInfra",
+      "ttftMs": 678,
+      "totalMs": 2380,
+      "tokensPerSec": 32,
+      "promptTokens": 159,
+      "completionTokens": 54,
+      "cost": 0.000015063,
+      "output": "The current weather in Tokyo is **18 °C** with **light rain**.",
+      "toolCalls": []
+    }
+  ],
+  "summary": [
+    {
+      "id": "venice/int4",
+      "label": "Venice",
+      "quantization": "int4",
+      "contextLength": 128000,
+      "price": {
+        "prompt": 3e-8,
+        "completion": 1.5e-7
+      },
+      "uptime1d": 99.85875706214689,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 0,
+      "passRate": 0,
+      "qualityRate": null,
+      "availability": 0,
+      "failures": {
+        "rate_limited": 10
+      },
+      "servedBy": {},
+      "p50TtftMs": null,
+      "p50TokensPerSec": null,
+      "avgCost": null,
+      "totalCost": 0
+    },
+    {
+      "id": "coreweave/fp4",
+      "label": "CoreWeave",
+      "quantization": "fp4",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 3e-8,
+        "completion": 1.7e-7
+      },
+      "uptime1d": 99.78843441466854,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 7,
+      "passRate": 0.7,
+      "qualityRate": 1,
+      "availability": 0.7,
+      "failures": {
+        "rate_limited": 3
+      },
+      "servedBy": {
+        "CoreWeave": 7
+      },
+      "p50TtftMs": 412,
+      "p50TokensPerSec": 57,
+      "avgCost": 0.000017215714285714286,
+      "totalCost": 0.00012051
+    },
+    {
+      "id": "dekallm/bf16",
+      "label": "DekaLLM",
+      "quantization": "bf16",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 3e-8,
+        "completion": 1.8e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 4,
+      "passRate": 0.4,
+      "qualityRate": 1,
+      "availability": 0.4,
+      "failures": {
+        "rate_limited": 6
+      },
+      "servedBy": {
+        "DekaLLM": 4
+      },
+      "p50TtftMs": 704,
+      "p50TokensPerSec": 27,
+      "avgCost": 0.000016755,
+      "totalCost": 0.00006702
+    },
+    {
+      "id": "akashml/bf16",
+      "label": "AkashML",
+      "quantization": "bf16",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 3e-8,
+        "completion": 1.87e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 9,
+      "passRate": 0.9,
+      "qualityRate": 1,
+      "availability": 0.9,
+      "failures": {
+        "rate_limited": 1
+      },
+      "servedBy": {
+        "AkashML": 9
+      },
+      "p50TtftMs": 1110,
+      "p50TokensPerSec": 51,
+      "avgCost": 0.000017496444444444446,
+      "totalCost": 0.00015746800000000002
+    },
+    {
+      "id": "deepinfra/bf16",
+      "label": "DeepInfra",
+      "quantization": "bf16",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 3.7e-8,
+        "completion": 1.7e-7
+      },
+      "uptime1d": 99.36575052854123,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 10,
+      "passRate": 1,
+      "qualityRate": 1,
+      "availability": 1,
+      "failures": {},
+      "servedBy": {
+        "DeepInfra": 10
+      },
+      "p50TtftMs": 811,
+      "p50TokensPerSec": 26,
+      "avgCost": 0.000017552199999999998,
+      "totalCost": 0.00017552199999999998
+    },
+    {
+      "id": "crusoe/bf16",
+      "label": "Crusoe",
+      "quantization": "bf16",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 5e-8,
+        "completion": 2.5e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 10,
+      "passRate": 1,
+      "qualityRate": 1,
+      "availability": 1,
+      "failures": {},
+      "servedBy": {
+        "Crusoe": 10
+      },
+      "p50TtftMs": 208,
+      "p50TokensPerSec": 215,
+      "avgCost": 0.000026530000000000005,
+      "totalCost": 0.00026530000000000005
+    },
+    {
+      "id": "mancer/fp8",
+      "label": "Mancer 2",
+      "quantization": "fp8",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 5e-8,
+        "completion": 2.5e-7
+      },
+      "uptime1d": 99.71751412429379,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 10,
+      "passRate": 1,
+      "qualityRate": 1,
+      "availability": 1,
+      "failures": {},
+      "servedBy": {
+        "Mancer 2": 10
+      },
+      "p50TtftMs": 731,
+      "p50TokensPerSec": 80,
+      "avgCost": 0.00002525,
+      "totalCost": 0.0002525
+    },
+    {
+      "id": "novita/fp4",
+      "label": "Novita",
+      "quantization": "fp4",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 5e-8,
+        "completion": 2.5e-7
+      },
+      "uptime1d": 99.64664310954063,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 4,
+      "passRate": 0.4,
+      "qualityRate": 0.4444444444444444,
+      "availability": 0.9,
+      "failures": {
+        "rejects_valid_request": 5,
+        "rate_limited": 1
+      },
+      "servedBy": {
+        "Novita": 4
+      },
+      "p50TtftMs": 472,
+      "p50TokensPerSec": 223,
+      "avgCost": 0.000025487500000000003,
+      "totalCost": 0.00010195000000000001
+    },
+    {
+      "id": "baseten/fp4/us",
+      "label": "BaseTen",
+      "quantization": "fp4",
+      "contextLength": 128072,
+      "price": {
+        "prompt": 1e-7,
+        "completion": 5e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 10,
+      "passRate": 1,
+      "qualityRate": 1,
+      "availability": 1,
+      "failures": {},
+      "servedBy": {
+        "BaseTen": 10
+      },
+      "p50TtftMs": 331,
+      "p50TokensPerSec": 206,
+      "avgCost": 0.00005364,
+      "totalCost": 0.0005364
+    },
+    {
+      "id": "baseten/fp4",
+      "label": "BaseTen",
+      "quantization": "fp4",
+      "contextLength": 128072,
+      "price": {
+        "prompt": 1e-7,
+        "completion": 5e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 10,
+      "passRate": 1,
+      "qualityRate": 1,
+      "availability": 1,
+      "failures": {},
+      "servedBy": {
+        "BaseTen": 10
+      },
+      "p50TtftMs": 400,
+      "p50TokensPerSec": 243,
+      "avgCost": 0.00005234000000000002,
+      "totalCost": 0.0005234000000000001
+    },
+    {
+      "id": "parasail/fp4",
+      "label": "Parasail",
+      "quantization": "fp4",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1e-7,
+        "completion": 7.5e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 8,
+      "passRate": 0.8,
+      "qualityRate": 1,
+      "availability": 0.8,
+      "failures": {
+        "rate_limited": 2
+      },
+      "servedBy": {
+        "Parasail": 8
+      },
+      "p50TtftMs": 374,
+      "p50TokensPerSec": 158,
+      "avgCost": 0.0000685025,
+      "totalCost": 0.00054802
+    },
+    {
+      "id": "sambanova",
+      "label": "SambaNova",
+      "quantization": "unknown",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.4e-7,
+        "completion": 9.5e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 10,
+      "passRate": 1,
+      "qualityRate": 1,
+      "availability": 1,
+      "failures": {},
+      "servedBy": {
+        "SambaNova": 10
+      },
+      "p50TtftMs": 531,
+      "p50TokensPerSec": 1371,
+      "avgCost": 0.00010589,
+      "totalCost": 0.0010589
+    },
+    {
+      "id": "nebius/fp4",
+      "label": "Nebius",
+      "quantization": "fp4",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 6e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 5,
+      "passRate": 0.5,
+      "qualityRate": 0.5,
+      "availability": 1,
+      "failures": {
+        "invalid_tool_args_json": 5
+      },
+      "servedBy": {
+        "Nebius": 10
+      },
+      "p50TtftMs": 421,
+      "p50TokensPerSec": 560,
+      "avgCost": 0.00006869999999999999,
+      "totalCost": 0.0006869999999999999
+    },
+    {
+      "id": "deepinfra/turbo",
+      "label": "DeepInfra",
+      "quantization": "bf16",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 6e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 10,
+      "passRate": 1,
+      "qualityRate": 1,
+      "availability": 1,
+      "failures": {},
+      "servedBy": {
+        "DeepInfra": 10
+      },
+      "p50TtftMs": 384,
+      "p50TokensPerSec": 278,
+      "avgCost": 0.00006591,
+      "totalCost": 0.0006591
+    },
+    {
+      "id": "phala",
+      "label": "Phala",
+      "quantization": "unknown",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 6e-7
+      },
+      "uptime1d": 99.72527472527473,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 9,
+      "passRate": 0.9,
+      "qualityRate": 0.9,
+      "availability": 1,
+      "failures": {
+        "rejects_valid_request": 1
+      },
+      "servedBy": {
+        "Phala": 9
+      },
+      "p50TtftMs": 798,
+      "p50TokensPerSec": 203,
+      "avgCost": 0.00007516666666666666,
+      "totalCost": 0.0006764999999999999
+    },
+    {
+      "id": "together",
+      "label": "Together",
+      "quantization": "unknown",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 6e-7
+      },
+      "uptime1d": 99.92937853107344,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 8,
+      "passRate": 0.8,
+      "qualityRate": 0.8,
+      "availability": 1,
+      "failures": {
+        "rejects_valid_request": 2
+      },
+      "servedBy": {
+        "Together": 8
+      },
+      "p50TtftMs": 255,
+      "p50TokensPerSec": 109,
+      "avgCost": 0.00008559375,
+      "totalCost": 0.00068475
+    },
+    {
+      "id": "groq",
+      "label": "Groq",
+      "quantization": "unknown",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 6e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 10,
+      "passRate": 1,
+      "qualityRate": 1,
+      "availability": 1,
+      "failures": {},
+      "servedBy": {
+        "Groq": 10
+      },
+      "p50TtftMs": 360,
+      "p50TokensPerSec": 574,
+      "avgCost": 0.00007536000000000001,
+      "totalCost": 0.0007536000000000001
+    },
+    {
+      "id": "mara",
+      "label": "Mara",
+      "quantization": "unknown",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 1.5e-7,
+        "completion": 7.5e-7
+      },
+      "uptime1d": 93.00184162062615,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 10,
+      "passRate": 1,
+      "qualityRate": 1,
+      "availability": 1,
+      "failures": {},
+      "servedBy": {
+        "Mara": 10
+      },
+      "p50TtftMs": 546,
+      "p50TokensPerSec": 280,
+      "avgCost": 0.00009015000000000002,
+      "totalCost": 0.0009015000000000002
+    },
+    {
+      "id": "cerebras/fp16",
+      "label": "Cerebras",
+      "quantization": "fp16",
+      "contextLength": 131072,
+      "price": {
+        "prompt": 3.5e-7,
+        "completion": 7.5e-7
+      },
+      "uptime1d": 100,
+      "kind": "provider",
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 10,
+      "passRate": 1,
+      "qualityRate": 1,
+      "availability": 1,
+      "failures": {},
+      "servedBy": {
+        "Cerebras": 10
+      },
+      "p50TtftMs": 297,
+      "p50TokensPerSec": 2594,
+      "avgCost": 0.00011045000000000003,
+      "totalCost": 0.0011045000000000002
+    },
+    {
+      "id": "default",
+      "label": "OpenRouter default routing",
+      "kind": "baseline",
+      "price": {
+        "prompt": 3.5e-7,
+        "completion": 9.5e-7
+      },
+      "model": "openai/gpt-oss-120b",
+      "unavailable": false,
+      "n": 10,
+      "passes": 10,
+      "passRate": 1,
+      "qualityRate": 1,
+      "availability": 1,
+      "failures": {},
+      "servedBy": {
+        "Parasail": 8,
+        "AkashML": 2
+      },
+      "p50TtftMs": 430,
+      "p50TokensPerSec": 108,
+      "avgCost": 0.0000529828,
+      "totalCost": 0.000529828
+    },
+    {
+      "id": "exacto",
+      "label": ":exacto",
+      "kind": "baseline",
+      "price": {
+        "prompt": 3.5e-7,
+        "completion": 9.5e-7
+      },
+      "model": "openai/gpt-oss-120b:exacto",
+      "unavailable": false,
+      "n": 10,
+      "passes": 10,
+      "passRate": 1,
+      "qualityRate": 1,
+      "availability": 1,
+      "failures": {},
+      "servedBy": {
+        "AkashML": 1,
+        "DekaLLM": 1,
+        "Parasail": 8
+      },
+      "p50TtftMs": 401,
+      "p50TokensPerSec": 118,
+      "avgCost": 0.00006220920000000001,
+      "totalCost": 0.0006220920000000001
+    }
+  ],
+  "cases": [
+    {
+      "id": "single-tool",
+      "description": "Simple tool call, all args given",
+      "passRate": 0.9393939393939394,
+      "failingProviders": [
+        "nebius/fp4"
+      ],
+      "verdict": "provider-level"
+    },
+    {
+      "id": "pick-the-right-tool",
+      "description": "Choose 1 of 3 similar tools",
+      "passRate": 0.9714285714285714,
+      "failingProviders": [
+        "nebius/fp4"
+      ],
+      "verdict": "provider-level"
+    },
+    {
+      "id": "nested-args",
+      "description": "Array + ISO datetime arguments",
+      "passRate": 0.8709677419354839,
+      "failingProviders": [
+        "novita/fp4",
+        "nebius/fp4"
+      ],
+      "verdict": "provider-level"
+    },
+    {
+      "id": "no-tool-needed",
+      "description": "Tools available but should answer directly",
+      "passRate": 0.9142857142857143,
+      "failingProviders": [
+        "novita/fp4",
+        "phala"
+      ],
+      "verdict": "provider-level"
+    },
+    {
+      "id": "multi-turn-tool-result",
+      "description": "Use a tool result from a previous turn",
+      "passRate": 0.9090909090909091,
+      "failingProviders": [
+        "novita/fp4",
+        "together"
+      ],
+      "verdict": "provider-level"
+    }
+  ],
+  "spent": 0.01042585999999999,
+  "aborted": null,
+  "ranAt": "2026-10-15T22:32:24.630Z",
+  "recommendation": {
+    "provider": {
+      "order": [
+        "deepinfra/bf16",
+        "mancer/fp8",
+        "crusoe/bf16"
+      ],
+      "allow_fallbacks": true,
+      "ignore": [
+        "novita/fp4",
+        "nebius/fp4"
+      ],
+      "require_parameters": true
+    },
+    "reasons": [
+      "prefer deepinfra/bf16: 100% quality, 811ms TTFT, $0.00002/call",
+      "prefer mancer/fp8: 100% quality, 731ms TTFT, $0.00003/call",
+      "prefer crusoe/bf16: 100% quality, 208ms TTFT, $0.00003/call",
+      "ignore novita/fp4: 44% quality (rejects_valid_request×5, rate_limited×1)",
+      "ignore nebius/fp4: 50% quality (invalid_tool_args_json×5)",
+      "not preferred dekallm/bf16: only answered 40% of calls (rate_limited×6), too little evidence"
+    ],
+    "caveat": "Provisional: based on 10–10 calls per provider on this suite only. Clear failures that reproduce are meaningful; the order among passing providers is not. Re-run with more runs (-r 5+) and your own prompts before changing production routing.",
+    "comparison": {
+      "defaultPassRate": 1,
+      "recommendedPassRate": 1,
+      "defaultAvgCost": 0.0000529828,
+      "recommendedAvgCost": 0.000017552199999999998
+    },
+    "priority": "quality"
+  }
+}

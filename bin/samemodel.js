@@ -97,6 +97,7 @@ console.log(`\nRecommended routing (${rec.priority}):\n`);
 console.log(JSON.stringify({ model: a.model, provider: rec.provider }, null, 2));
 console.log("");
 for (const r of rec.reasons) console.log(`  · ${r}`);
+console.log(`\n  ${rec.caveat}`);
 if (report.aborted) console.log(`\n${report.aborted}`);
 console.log(`\nspent ${usd(report.spent)}`);
 
