@@ -5,7 +5,6 @@
 On OpenRouter, an open model like DeepSeek V3.2 is served by many providers, each with its own inference stack, quantization and tool-call parser. SameModel runs your test prompts against every provider serving a model, shows which ones break, and suggests a `provider` routing config that avoids them.
 
 - **Live:** https://samemodel.vercel.app (replay three recorded real runs with no key, or paste your own key for a live run)
-- **Demo video:** _TODO: link_
 
 ```bash
 git clone https://github.com/AkritiKeswani/samemodel && cd samemodel
@@ -26,7 +25,6 @@ npm run bench -- -m deepseek/deepseek-v3.2 -s tool-calling -r 3
 - **OpenRouter documented it:** [*Provider Variance: Introducing Exacto*](https://openrouter.ai/blog/announcements/provider-variance-introducing-exacto/) measured tool-call failures that differ by provider, and shipped `:exacto` for about 5 models in response.
 - **A production write-up** ([Mo Moustafa](https://mmoustafa.com/blog/so-you-want-to-use-openrouter/), via [Pinggy](https://pinggy.io/blog/openrouter_production_provider_routing_pitfalls/), Sep 2026) reports the same model scoring 81% on TAU-Bench from one provider and 46–58% from others, plus one provider causing about 92% of their empty completions.
 - **I reproduced it myself** (see [What it found](#what-it-found)).
-- **Where I encountered it:** _TODO: 2–3 links to OpenRouter Discord / X / Reddit posts_
 
 ## Why this approach
 
